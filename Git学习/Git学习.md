@@ -28,6 +28,7 @@
     * [方法一：本地已有](#方法一本地已有)
     * [方法二：本地没有](#方法二本地没有)
 * [4\. Github\+Typora完美云笔记](#4-githubtypora完美云笔记)
+    * [==问题1：github不支持TOC目录，如何解决？==](#问题1github不支持toc目录如何解决)
 
 ### 1.了解Git和Github
 
@@ -285,5 +286,78 @@ git clone git@github.com:smuyyh/BookReader.git
 
 参考https://blog.csdn.net/qq_38056704/article/details/84765586
 
+##### ==问题1：github不支持TOC目录，如何解决？==
 
+Github不支持[TOC]目录生成，这里使用开源的目录生成工具--gh-md-toc。
 
+ **gh-md-toc GitHub地址：** https://github.com/ekalinin/github-markdown-toc
+**gh-md-toc 下载地址：** https://github.com/ekalinin/github-markdown-toc.go/releases 
+
+直接下载 gh-md-toc.windows.386.tgz 
+
+1. 解压，加上后缀名.exe；
+
+2. 将gh-md-toc.exe与md文件放到同一目录下，按住shift+右键进入Power Shell。
+
+3. 运行``` ./gh-md-toc.exe Git学习.md```
+
+4. 复制结果到.md文件
+
+   ```
+   Table of Contents
+   =================
+   
+   Header: Strict-Transport-Security=max-age=31536000; includeSubdomains; preload
+   Header: X-Xss-Protection=1; mode=block
+   Header: Referrer-Policy=origin-when-cross-origin, strict-origin-when-cross-origin
+   Header: Date=Tue, 26 Jan 2021 09:00:11 GMT
+   Header: X-Ratelimit-Remaining=59
+   Header: X-Ratelimit-Used=1
+   Header: Access-Control-Allow-Origin=*
+   Header: X-Ratelimit-Reset=1611655211
+   Header: Content-Security-Policy=default-src 'none'
+   Header: Vary=Accept-Encoding, Accept, X-Requested-With
+   Header: X-Github-Request-Id=C67E:85DD:14CD10:17B8CB:600FDA1B
+   Header: Content-Type=text/html;charset=utf-8
+   Header: Server=GitHub.com
+   Header: Status=200 OK
+   Header: X-Ratelimit-Limit=60
+   Header: Access-Control-Expose-Headers=ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+   Header: X-Frame-Options=deny
+   Header: X-Content-Type-Options=nosniff
+   Header: X-Commonmarker-Version=0.21.0
+   * [1\.了解Git和Github](#1了解git和github)
+     * [1\.1 什么是Git](#11-什么是git)
+     * [1\.2 什么是Github](#12-什么是github)
+     * [1\.3 Github和Git关系](#13-github和git关系)
+   * [2\. Git入门](#2-git入门)
+     * [2\.1 Git的作用](#21-git的作用)
+     * [2\.2 Git使用](#22-git使用)
+       * [1\. 设置身份](#1-设置身份)
+       * [2\. 初始化代码仓库](#2-初始化代码仓库)
+       * [3\. 添加文件](#3-添加文件)
+       * [4\. 删除文件夹](#4-删除文件夹)
+       * [5\.实现版本回退](#5实现版本回退)
+       * [5\. 超级后悔药](#5-超级后悔药)
+   * [3\. 使用Github](#3-使用github)
+     * [3\.1 基本概念](#31-基本概念)
+       * [仓库（Repository）](#仓库repository)
+       * [收藏（Star）](#收藏star)
+       * [克隆（Fork）](#克隆fork)
+       * [发起请求（pull request）](#发起请求pull-request)
+       * [关注（Watch）](#关注watch)
+       * [事务卡片（Issue）](#事务卡片issue)
+     * [3\.2 Github页面](#32-github页面)
+       * [仓库主页](#仓库主页)
+     * [3\.3 Github账户管理](#33-github账户管理)
+     * [3\.4 结合Git创建Github仓库](#34-结合git创建github仓库)
+       * [方法一：本地已有](#方法一本地已有)
+       * [方法二：本地没有](#方法二本地没有)
+   * [4\. Github\+Typora完美云笔记](#4-githubtypora完美云笔记)
+   
+   Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
+   ```
+
+   注意，从*开始复制。
+
+   
