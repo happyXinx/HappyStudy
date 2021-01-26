@@ -1,3 +1,5 @@
+参考：[git简明指南](https://rogerdudler.github.io/git-guide/index.zh.html)，[Git和GitHub使用教程](https://www.jianshu.com/p/296d22275cdd)，[B站教程](https://www.bilibili.com/video/BV1Xx411m7kn?p=10)
+
 ### 1.了解Git和Github
 
 #### 1.1 什么是Git
@@ -95,7 +97,15 @@ git add命令把文件添加到仓库缓存区中；
 
 git commit把缓存区中的所有文件正式提交到仓库
 
-##### 4.实现版本回退
+##### 4. 删除文件夹
+
+```
+git rm -r --cached "文件夹的名称" 
+git commit -m "更新log"
+git push origin master
+```
+
+##### 5.实现版本回退
 
 输入git log命令查看版本情况
 
@@ -202,9 +212,9 @@ ssh-keygen -t rsa -C "liuxinoe@126.com"
 
 为什么Github需要SSH Key呢？因为Github需要识别出你推送的提交确实是你推送的，而不是比尔冒充的，而Git支持SSH协议，所以Github知道你的公钥，就可以确认你的身份。
 
-#### 3.4 创建仓库
+#### 3.4 结合Git创建Github仓库
 
-方法一：
+##### 方法一：本地已有
 
 把本地已有同名的Git仓库和Github上的仓库关联起来。
 
@@ -236,3 +246,14 @@ git push -u origin master
 git push origin master
 ```
 
+##### 方法二：本地没有
+
+直接克隆到本地
+
+```bash
+git clone git@github.com:smuyyh/BookReader.git
+```
+
+### 4. Github+Typora完美云笔记
+
+参考https://blog.csdn.net/qq_38056704/article/details/84765586
