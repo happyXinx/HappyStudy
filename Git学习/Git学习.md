@@ -1,5 +1,7 @@
 参考：[git简明指南](https://rogerdudler.github.io/git-guide/index.zh.html)，[Git和GitHub使用教程](https://www.jianshu.com/p/296d22275cdd)，[B站教程](https://www.bilibili.com/video/BV1Xx411m7kn?p=10)
 
+[TOC]
+
 ### 1.了解Git和Github
 
 #### 1.1 什么是Git
@@ -57,13 +59,11 @@ print("你好");
 
 git工作区域
 
-##### ![img](Git学习.assets/clip_image002-1611627491896.jpg)  
+![img](Git学习.assets/clip_image002-1611627491896.jpg)  
 
 向仓库中添加文件流程
 
 ​         ![img](Git学习.assets/clip_image002-1611627564403.jpg)  
-
-
 
 windows打开GitBash。
 
@@ -257,3 +257,6 @@ git clone git@github.com:smuyyh/BookReader.git
 ### 4. Github+Typora完美云笔记
 
 参考https://blog.csdn.net/qq_38056704/article/details/84765586
+
+
+
