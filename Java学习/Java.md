@@ -1142,9 +1142,85 @@ Exception：其他因编程错误导致的一般性问题。
 * 网络连接中断
 * 数组角标越界
 
-
-
 对于这些错误，两种处理方式：一是不管，遇到错误就终止运行。二是由程序员在编写程序时，就考虑到错误的检测、错误消息的提示，以及错误的处理。
+
+
+
+##### 运行时异常
+
+* 是指编译器不要求强制处理的异常。一般是指编程时的逻辑错误，是程序员应该积极避免其出现的异常。java.lang.RuntimeException类及它的子类都是运行时异常。
+
+##### 编译时异常
+
+是指编译器要求必须处置的异常。即程序在运行时由于外界因素造成的一般性异常，编译器要求java程序必须捕获或声明所有编译时异常。
+
+#### 2. 常见异常
+
+![image-20210726192314353](D:\HappyStudy\Java学习\Java.assets\image-20210726192314353.png)
+
+#### 3. 异常处理机制
+
+Java采用的异常处理机制，是将异常处理的程序代码集中在一起，与正常的程序代码分开，使得程序简洁、优雅，易于维护。
+
+##### try catch finally
+
+![image-20210726192818594](D:\HappyStudy\Java学习\Java.assets\image-20210726192818594.png)
+
+#### 4. throws
+
+如果一个方法中的语句可能生成某种异常，但是并不能确定如何处理这种异常，则此方法应显示地声明抛出异常，表明该方法将不对这些异常进行处理，而是由该方法的调用者进行处理。
+
+![image-20210726193451828](D:\HappyStudy\Java学习\Java.assets\image-20210726193451828.png)
+
+#### 6. 用户自定义异常类
+
+* 一般都是RuntimeException的子类
+* 需要编写几个重载的构造器
+* 需要提供serialVersionUID
+* 通过throw抛出
+
+```
+public class ReturnExceptionDemo {
+
+    static void methodA(){
+        try {
+            System.out.println("进入方法A");
+            throw new RuntimeException("制造异常");
+        }finally {
+            System.out.println("用A方法的finally");
+        }
+    }
+
+    static void methodB(){
+        try {
+            System.out.println("进入方法B");
+        }finally {
+            System.out.println("用B方法的finally");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            methodA();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        methodB();
+    }
+}
+```
+
+##### throw 和 throws的区别
+
+throw: 异常的生成阶段：手动抛出异常对象
+
+throws: 异常的处理方式，声明方法可能要抛出的各种异常类。
+
+
+
+
+
+
 
 
 
